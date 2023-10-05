@@ -31,7 +31,7 @@ import { ShowsComponent } from './components/shows/shows.component';
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'shows', component: ShowsComponent},
-      { path: 'show-details', component: ShowDetailsComponent}
+      { path: 'show-details/:id', component: ShowDetailsComponent}
     ])
   ],
   providers: [],

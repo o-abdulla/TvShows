@@ -3,6 +3,8 @@ using TvShows.Models;
 
 namespace TvShows.Controllers
 {
+    [Route("[controller]")]
+    [ApiController]
     public class ShowsController : Controller
     {
         TvShowDbContext dbContext = new TvShowDbContext();
