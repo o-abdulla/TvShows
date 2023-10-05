@@ -1,0 +1,4 @@
+<div *ngFor="let s of allShows">
+    <a [routerLink]="['/show-details', s.id]">
+    <li>{{ s.name }}</li></a>
+</div>
