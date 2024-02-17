@@ -12,4 +12,6 @@ public partial class Show
     public string? Genre { get; set; }
 
     public int? Rating { get; set; }
+
+    public string? Img { get; set; }
 }

@@ -11,6 +11,7 @@ export class ShowsComponent {
 
   // showId:number = 0;
   allShows:Show[] = [];
+  newShow:Show = {} as Show;
 
   constructor(
     private _showService: ShowService
@@ -26,6 +27,17 @@ export class ShowsComponent {
       this.allShows = response;
     });
     return this.allShows;
+  }
+
+  AddingShow(newShow:Show):void{
+    this._showService.addShow(newShow).subscribe((response:Show) => {
+      console.log(response);
+      this.allShows.push(response);
+      newShow.name = "";
+      newShow.img = "";
+      newShow.genre = "";
+      newShow.rating = 0;
+    });
   }
 
 }

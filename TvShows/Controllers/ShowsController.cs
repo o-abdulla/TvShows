@@ -20,5 +20,17 @@ namespace TvShows.Controllers
         {
             return dbContext.Shows.FirstOrDefault(s => s.Id == id);
         }
+
+        [HttpPost("addShow")]
+        public Show addShow([FromBody] Show newShow)
+        {
+            if(newShow.Rating < 0 ||  newShow.Rating > 10)
+            {
+                throw new ArgumentOutOfRangeException("Rating must be between 0 and 10");
+            }
+            dbContext.Shows.Add(newShow);
+            dbContext.SaveChanges();
+            return newShow;
+        }
     }
 }

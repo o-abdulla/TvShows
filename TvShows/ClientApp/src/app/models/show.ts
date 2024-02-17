@@ -3,4 +3,5 @@ export interface Show {
     name:string;
     genre:string;
     rating:number;
+    img:string;
 }

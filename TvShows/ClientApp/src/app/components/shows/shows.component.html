@@ -1,4 +1,51 @@
-<div *ngFor="let s of allShows">
+<h1>TV Shows</h1>
+<br>
+
+<div class="shows" *ngFor="let s of allShows">
     <a [routerLink]="['/show-details', s.id]">
-    <li>{{ s.name }}</li></a>
+    <h5><li>{{ s.name }}</li></h5>
+    </a>
+</div>
+
+<br>
+<br>
+<br>
+
+<div>
+    <form #showsForm="ngForm">
+    <h3>Add a new Show</h3>
+    <input
+        type="text"
+        [(ngModel)]="newShow.name"
+        name="show"
+        placeholder="TV Show Name"
+        required
+    />
+    <br>
+    <input
+        type="text"
+        [(ngModel)]="newShow.img"
+        name="img"
+        placeholder="Image URL"
+        required
+    />
+    <br>
+    <input
+        type="text"
+        [(ngModel)]="newShow.genre"
+        name="genre"
+        placeholder="Genre"
+        required
+    />
+    <br>
+    <input
+        type="number"
+        [(ngModel)]="newShow.rating" required min="1" max="10"
+        name="rating"
+        placeholder="Rating (1-10)"
+        required
+    />
+    <br>
+    <button [disabled]="showsForm.invalid" (click)="AddingShow(newShow)">Add Show</button>
+    </form>
 </div>

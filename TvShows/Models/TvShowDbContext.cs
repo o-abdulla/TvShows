@@ -30,6 +30,7 @@ public partial class TvShowDbContext : DbContext
             entity.ToTable("shows");
 
             entity.Property(e => e.Genre).HasMaxLength(255);
+            entity.Property(e => e.Img).HasMaxLength(4000);
             entity.Property(e => e.Name).HasMaxLength(255);
         });
 

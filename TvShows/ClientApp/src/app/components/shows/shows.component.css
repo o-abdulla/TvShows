@@ -1,0 +1,23 @@
+/* styles.css */
+
+.shows {
+    margin-bottom: 40px;
+}
+
+a, li {
+    color: rgb(0, 0, 0);
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make the link inline so it wraps the text only */
+    margin-right: 10px; /* Add space to the right of each link */
+}
+
+a, li:hover {
+    color: aqua;
+}
+
+
+h1 {
+    color: rgb(223, 110, 194);
+    text-align: center;
+}
+

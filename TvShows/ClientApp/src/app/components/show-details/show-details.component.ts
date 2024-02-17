@@ -20,7 +20,7 @@ export class ShowDetailsComponent {
 
   ngOnInit():void{
     const routeParams = this._route.snapshot.paramMap;
-  let id: number = Number(routeParams.get("id"));
+    let id: number = Number(routeParams.get("id"));
     this.GetById(id);
     console.log(id)
   }
