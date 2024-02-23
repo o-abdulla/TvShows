@@ -32,5 +32,14 @@ namespace TvShows.Controllers
             dbContext.SaveChanges();
             return newShow;
         }
+
+        [HttpDelete("{id}")]
+        public Show deleteShow(int id)
+        {
+            Show deleted = dbContext.Shows.Find(id);
+            dbContext.Shows.Remove(deleted);
+            dbContext.SaveChanges();
+            return deleted;
+        }
     }
 }

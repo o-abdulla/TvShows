@@ -40,4 +40,13 @@ export class ShowsComponent {
     });
   }
 
+  DeletingShow(id:number):void{
+    let target:number = this.allShows.findIndex(s => s.id == id);
+    this.allShows.splice(target, 1);
+
+    this._showService.deleteShow(id).subscribe((response:Show) => {
+      console.log(response);
+    });
+  }
+
 }

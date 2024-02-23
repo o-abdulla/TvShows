@@ -21,4 +21,8 @@ export class ShowService {
   addShow(newShow:Show): Observable<Show>{
     return this.http.post<Show>(`${this.baseUrl}shows/addShow`, newShow);
   }
+
+  deleteShow(id:number): Observable<Show>{
+    return this.http.delete<Show>(`${this.baseUrl}shows/${id}`);
+  }
 }

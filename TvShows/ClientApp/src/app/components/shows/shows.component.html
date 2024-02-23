@@ -5,6 +5,7 @@
     <a [routerLink]="['/show-details', s.id]">
     <h5><li>{{ s.name }}</li></h5>
     </a>
+    <button class="delete-button" (click)="DeletingShow(s.id)">Delete</button>
 </div>
 
 <br>
