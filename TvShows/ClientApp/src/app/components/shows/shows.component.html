@@ -1,11 +1,13 @@
 <h1>TV Shows</h1>
 <br>
 
+<div class="show-container">
 <div class="shows" *ngFor="let s of allShows">
     <a [routerLink]="['/show-details', s.id]">
     <h5><li>{{ s.name }}</li></h5>
     </a>
     <button class="delete-button" (click)="DeletingShow(s.id)">Delete</button>
+</div>
 </div>
 
 <br>
@@ -14,7 +16,7 @@
 
 <div>
     <form #showsForm="ngForm">
-    <h3>Add a new Show</h3>
+    <h3>Add a New Show</h3>
     <input
         type="text"
         [(ngModel)]="newShow.name"
@@ -47,6 +49,6 @@
         required
     />
     <br>
-    <button [disabled]="showsForm.invalid" (click)="AddingShow(newShow)">Add Show</button>
+    <button class="addButton" [disabled]="showsForm.invalid" (click)="AddingShow(newShow)">Add Show</button>
     </form>
 </div>

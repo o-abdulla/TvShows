@@ -15,6 +15,13 @@ code {
   border-color: #1861ac;
 }
 
+/* body {
+  background-color: rgb(35, 34, 34);
+} */
+
 body {
-  background-color: rgb(191, 204, 180);
+  background-image: url('https://virtual-bg.com/wp-content/uploads/2020/08/seinfeld-livingroom.jpg');
+  background-size: cover; /* Adjust to cover or contain as needed */
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Optional: Keeps the background fixed while scrolling */
 }

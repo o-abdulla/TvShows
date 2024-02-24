@@ -6,10 +6,25 @@
   transform: translate(-50%, -50%);
 }
 
-h3 {
-    text-align: center;
+h2 {
+  color: rgb(223, 110, 194);
+  text-align: center;
 }
 
 p {
   font-size: larger ;
+  color: white;
+}
+
+.back-to-shows {
+  text-align: left;
+  margin-top: 20px; /* Adjust this value as needed */
+}
+
+.back-to-shows a {
+  color: rgb(223, 110, 194);
+}
+
+.back-to-shows a:hover {
+  color: aqua; /* Adjust color as needed */
 }
