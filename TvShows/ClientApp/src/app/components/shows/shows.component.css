@@ -3,14 +3,14 @@
 .show-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Adjust as needed */
+    /* justify-content: space-between; */
     max-height: 400px; /* Set a max height for the container */
     overflow-y: auto; /* Enable vertical scrolling if needed */
 }
 
 .shows {
     margin-bottom: 40px;
-    width: calc(20% - 20px); /* Set the width for each column */
+    width: calc(25% - 4px); /* Set the width for each column */
 }
 
 a, li {
@@ -49,3 +49,12 @@ h3 {
     color: white;
     border: 1px solid darkred; /* Change border color on hover */
 }
+
+hr {
+    width: 100%; /* Full width */
+    height: 3px; /* Thickness of the line */
+    background-color: white; /* Color of the line */
+    margin: 20px 0; /* Spacing above and below the line */
+    border: none; /* No border */
+}
+

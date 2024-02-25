@@ -18,7 +18,8 @@ p {
 
 .back-to-shows {
   text-align: left;
-  margin-top: 20px; /* Adjust this value as needed */
+  /* margin-top: 5px; */
+  font-size: 20px;
 }
 
 .back-to-shows a {
@@ -27,4 +28,8 @@ p {
 
 .back-to-shows a:hover {
   color: aqua; /* Adjust color as needed */
+}
+
+.arrow {
+  font-size: 35px;
 }

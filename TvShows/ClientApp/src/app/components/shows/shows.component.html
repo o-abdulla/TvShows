@@ -10,9 +10,12 @@
 </div>
 </div>
 
+
 <br>
 <br>
-<br>
+
+<hr>
+
 
 <div>
     <form #showsForm="ngForm">
@@ -22,6 +25,7 @@
         [(ngModel)]="newShow.name"
         name="show"
         placeholder="TV Show Name"
+        style="width: 200px;"
         required
     />
     <br>
@@ -30,6 +34,7 @@
         [(ngModel)]="newShow.img"
         name="img"
         placeholder="Image URL"
+        style="width: 200px;"
         required
     />
     <br>
@@ -38,6 +43,7 @@
         [(ngModel)]="newShow.genre"
         name="genre"
         placeholder="Genre"
+        style="width: 200px;"
         required
     />
     <br>
@@ -46,6 +52,8 @@
         [(ngModel)]="newShow.rating" required min="1" max="10"
         name="rating"
         placeholder="Rating (1-10)"
+        style="width: 200px;"
+        (input)="checkForDecimal($event)"
         required
     />
     <br>

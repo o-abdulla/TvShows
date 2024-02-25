@@ -12,6 +12,7 @@ export class ShowsComponent {
   // showId:number = 0;
   allShows:Show[] = [];
   newShow:Show = {} as Show;
+  decimalEntered: boolean = false;
 
   constructor(
     private _showService: ShowService
@@ -30,6 +31,11 @@ export class ShowsComponent {
   }
 
   AddingShow(newShow:Show):void{
+    if(this.decimalEntered){
+      alert('Whole numbers only, please.');
+      return;
+    }
+
     this._showService.addShow(newShow).subscribe((response:Show) => {
       console.log(response);
       this.allShows.push(response);
@@ -49,4 +55,12 @@ export class ShowsComponent {
     });
   }
 
+  checkForDecimal(event: any) {
+    const value = event.target.value;
+    if (value.includes('.')) {
+      this.decimalEntered = true;
+    } else {
+      this.decimalEntered = false;
+    }
+  }
 }
